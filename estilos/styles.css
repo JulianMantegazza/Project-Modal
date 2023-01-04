@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap');
+
+:root {
+    --radius: 25px;
+    --ff-prime: 'Dosis', sans-serif;
+    --transition: all 0.5s linear;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: brown;
+    font-family: var(--ff-prime);
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+.container {
+    background: url(../images/background-walls.jpeg) center/cover no-repeat;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.banner {
+    background: url(../images/background-skypng.jpeg) center/cover no-repeat;
+    border: 5px solid aquamarine;
+    border-radius: var(--radius);
+    max-width: 660px;
+    padding: 4rem 0;
+    text-align: center;
+    width: 90vw;
+}
+
+h1,
+h2 {
+    font-family: var(--ff-prime);
+    letter-spacing: 0.25rem;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    text-transform: capitalize;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        font-size: 1rem;
+    }
+  
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h1,
+    h2 {
+        line-height: 1;
+    }
+}
+
+.btn {
+    background: rgba(245, 245, 245, 0.55);
+    border: 2.5px solid darkcyan;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 4px darkslategray;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-family: var(--ff-prime);
+    font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+    padding: 0.4rem 0.8rem;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: greenyellow;
+    color: darkgreen;
+}
+
+.btn-modal {
+    margin-top: 2rem;
+}
+
+.modal-overlay {
+    background-color: rgba(75, 165, 235, 0.5);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: var(--transition);
+    visibility: hidden;
+    z-index: -10;
+}
+
+.modal-banner {
+    background: url(../images/background-freedom.jpeg) center/cover no-repeat;
+    border: 5px solid snow;
+    border-radius: var(--radius);
+    color: darkred;
+    height: 35vw;
+    width: 90vw;
+    max-width: 625px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.open-modal {
+    visibility: visible;
+    z-index: 10;
+}
+
+.btn-exit {
+    background: transparent;
+    border-color: transparent;
+    color: orangered;
+    cursor: pointer;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 0.4rem;
+    right: 0.2rem;
+    transition: var(--transition);
+}
+
+.btn-exit:hover {
+    color: crimson;
+    transform: scale(1.5);
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
